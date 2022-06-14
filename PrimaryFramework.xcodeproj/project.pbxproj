@@ -8,11 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		8CA27FF32859316F00A2AC1F /* PrimaryFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CA27FF22859316F00A2AC1F /* PrimaryFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8CA27FFC285931A900A2AC1F /* SDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA27FFB285931A900A2AC1F /* SDK.swift */; };
+		8CA27FFF2859331100A2AC1F /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 8CA27FFE2859331100A2AC1F /* GoogleSignIn */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8CA27FEF2859316F00A2AC1F /* PrimaryFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PrimaryFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CA27FF22859316F00A2AC1F /* PrimaryFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrimaryFramework.h; sourceTree = "<group>"; };
+		8CA27FFB285931A900A2AC1F /* SDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDK.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -20,6 +23,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CA27FFF2859331100A2AC1F /* GoogleSignIn in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +50,7 @@
 			isa = PBXGroup;
 			children = (
 				8CA27FF22859316F00A2AC1F /* PrimaryFramework.h */,
+				8CA27FFB285931A900A2AC1F /* SDK.swift */,
 			);
 			path = PrimaryFramework;
 			sourceTree = "<group>";
@@ -78,6 +83,9 @@
 			dependencies = (
 			);
 			name = PrimaryFramework;
+			packageProductDependencies = (
+				8CA27FFE2859331100A2AC1F /* GoogleSignIn */,
+			);
 			productName = PrimaryFramework;
 			productReference = 8CA27FEF2859316F00A2AC1F /* PrimaryFramework.framework */;
 			productType = "com.apple.product-type.framework";
@@ -93,6 +101,7 @@
 				TargetAttributes = {
 					8CA27FEE2859316F00A2AC1F = {
 						CreatedOnToolsVersion = 13.4;
+						LastSwiftMigration = 1340;
 					};
 				};
 			};
@@ -105,6 +114,9 @@
 				Base,
 			);
 			mainGroup = 8CA27FE52859316F00A2AC1F;
+			packageReferences = (
+				8CA27FFD2859331100A2AC1F /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+			);
 			productRefGroup = 8CA27FF02859316F00A2AC1F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -129,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CA27FFC285931A900A2AC1F /* SDK.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +271,7 @@
 		8CA27FF72859316F00A2AC1F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -278,6 +292,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -286,6 +301,7 @@
 		8CA27FF82859316F00A2AC1F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -333,6 +349,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8CA27FFD2859331100A2AC1F /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8CA27FFE2859331100A2AC1F /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8CA27FFD2859331100A2AC1F /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8CA27FE62859316F00A2AC1F /* Project object */;
 }
